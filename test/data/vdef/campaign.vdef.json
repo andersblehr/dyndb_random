@@ -1,0 +1,72 @@
+{
+    "key": "id",
+    "column_order": [
+        "id", "name", "description", "start_date", "end_date", "status",
+        "target_gender", "target_age_min", "target_age_max",
+        "game_difficulty", "star_range_min", "star_range_max",
+        "required_stars", "required_special_stars", "max_redeems_per_user",
+        "coupon_expiry_time", "coupon_heading", "coupon_text", "products"
+    ],
+    "columns": {
+        "id": {
+            "type": "S", "format": "uuid"
+        },
+        "name": {
+            "type": "S", "format": "lorem", "range": "1:3"
+        },
+        "description": {
+            "type": "S", "format": "lorem", "range": "5:"
+        },
+        "start_date": {
+            "type": "S", "format": "date", "range": "#now+-7:14"
+        },
+        "end_date": {
+            "type": "S", "format": "date", "range": "start_date+7:14"
+        },
+        "status": {
+            "type": "S", "format": "enum", "range": "active,inactive"
+        },
+        "target_gender": {
+            "type": "S", "format": "enum", "range": "M,F"
+        },
+        "target_age_min": {
+            "type": "N", "format": "int", "range": "18:60"
+        },
+        "target_age_max": {
+            "type": "N", "format": "int", "range": "target_age_min+20:40"
+        },
+        "game_difficulty": {
+            "type": "N", "format": "int", "range": "1:10"
+        },
+        "star_range_min": {
+            "type": "N", "format": "int", "range": "100:1000"
+        },
+        "star_range_max": {
+            "type": "N", "format": "int", "range": "3000:10000"
+        },
+        "required_stars": {
+            "type": "N", "format": "int", "range": "3:5"
+        },
+        "required_special_stars": {
+            "type": "N", "format": "int", "range": "0:3"
+        },
+        "max_redeems_per_user": {
+            "type": "N", "format": "int", "range": "1:5"
+        },
+        "coupon_expiry_time": {
+            "type": "N", "format": "int", "range": "86400:604800"
+        },
+        "coupon_heading": {
+            "type": "S", "format": "lorem", "range": "2:5"
+        },
+        "coupon_text": {
+            "type": "S", "format": "lorem", "range": "5:10"
+        },
+        "products": {
+            "type": "L", "range": "1:2",
+            "item": {
+                "type": "S", "format": "uuid", "linked": "product:id"
+            }
+        }
+    }
+}

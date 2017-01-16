@@ -1,0 +1,11 @@
+{
+    "key": "id",
+    "column_order": ["id", "name", "description", "image", "logo"],
+    "columns": {
+        "id": {"type": "S", "format": "uuid"},
+        "name": {"type": "S", "format": "lorem", "range": "1:3"},
+        "description": {"type": "S", "format": "lorem", "range": "5:"},
+        "image": {"type": "S", "format": "uuid"},
+        "logo": {"type": "S", "format": "uuid"}
+    }
+}

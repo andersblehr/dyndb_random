@@ -1,0 +1,7 @@
+{
+    "key": "id",
+    "column_order": ["id"],
+    "columns": {
+        "id": {"type": "S", "format": "uuid"}
+    }
+}

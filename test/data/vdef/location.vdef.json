@@ -1,0 +1,17 @@
+{
+    "key": "id",
+    "column_order": ["id", "name", "address", "lat", "long", "campaigns"],
+    "columns": {
+        "id": {"type": "S", "format": "uuid"},
+        "name": {"type": "S", "format": "lorem", "range": "2:5"},
+        "address": {"type": "S", "format": "lorem", "range": "3:5"},
+        "lat": {"type": "N", "format": "float", "range": "59.886921:59.968600"},
+        "long": {"type": "N", "format": "float", "range": "10.665886:10.792226"},
+        "campaigns": {
+            "type": "L", "range": "1:2",
+            "item": {
+                "type": "S", "format": "uuid", "linked": "campaign:id"
+            }
+        }
+    }
+}
