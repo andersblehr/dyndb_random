@@ -366,7 +366,7 @@ def main(argv):
     
 
 if __name__ == '__main__':
-    base_dir = os.environ['SHOTRUN_HOME']
+    base_dir = os.environ['PROJECT_HOME'] if os.getenv('PROJECT_HOME') else '.'
     vdef_dir = os.path.join(base_dir, 'test/data/vdef')
     csv_dir = os.path.join(base_dir, 'test/data/csv')
     
