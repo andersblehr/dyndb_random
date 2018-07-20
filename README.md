@@ -11,7 +11,7 @@ Usage:
 Options:
   -t: Generate data for DynamoDB table with name <table>. A value
       definitions file <table>.vdef.json must be present in the local
-      directory or in $SHOTRUN_HOME/test/data/vdef.
+      directory or in [$PROJECT_HOME/]test/data/vdef.
   -n: Generate <num rows> rows of data (default: 10).
   -o: Write data to <file>.json (default: ./<table>[.<timestamp>].json).
   -d: Write data in DynamoDB's internal JSON format (default: plain JSON).
