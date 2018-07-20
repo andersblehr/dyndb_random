@@ -6,7 +6,7 @@ Generate random test data for AWS DynamoDB.
 Generate random test data for a DynamoDB table.
 
 Usage:
-  dyndb_random.py -t <table> [-n <num rows>] [-o <file>] [-d] [-c] [-x]")
+  dyndb_random.py -t <table> [-n <num rows>] [-o <file>] [-d] [-c] [-x]
 
 Options:
   -t: Generate data for DynamoDB table with name <table>. A value
